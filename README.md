@@ -1,12 +1,12 @@
-validate.js
+# validate.js
 ===========
 
 Perform validation of fields in a form, using various methods.
 
-Installation
+## Installation
 <script src="validate.js"></script>
 
-Usage
+## Usage
 1. Create array of all elements to be validated
 e.g. {'id': 'elementID', 'method': "required|alpha", 'callback': function(error) {}, 'additionalField': document.getElementById('element2ID')}
 2. Create object of validate class
