@@ -74,7 +74,7 @@ Validate.message = {
     'numeric': "This field should contain numbers only",
     'integer': "This field should contain integers only",
     'decimal': "This field should contain decimal numbers only",
-    'alphaNumeric': "This field should contain alphabets and numbers only",
+    'alphaNumeric': "This field should contain alphabets and numbers only"
 };
 
 //public list of validation regular expressions
