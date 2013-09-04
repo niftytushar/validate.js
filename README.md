@@ -1,7 +1,7 @@
 # validate.js
-===========
+-----------
 
-Perform validation of fields in a form, using various methods.
+dead simple validation library
 
 ## Installation
 <script src="validate.js"></script>
