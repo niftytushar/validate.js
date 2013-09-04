@@ -1,5 +1,4 @@
 # validate.js
------------
 
 dead simple validation library
 
