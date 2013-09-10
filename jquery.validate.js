@@ -1,35 +1,41 @@
 ﻿/**
-* jquery.validate 0.5
-* 05th September 2013 Tushar Agarwal tushar.agarwal@softcruise.com
+* jquery.validate 0.6
+* 10th September 2013 Tushar Agarwal tushar.agarwal@softcruise.com
 * TODO: add validation for rules 'match' and 'min_length'
 */
 
 (function ($) {
-    $.fn.validate = function(options) {
-	var settings = $.extend({}, $fn.validate.defaults, options);
-    }
+    $.fn.validate = function (options) {
+        var settings = $.extend({}, $.fn.validate.defaults, options);
 
-    $.fn.validate.defaults = {
-	rule: "required"
+        return this;
     };
 
+    $.fn.validate.defaults = {
+        rule: "required"
+    };
+
+    $.fn.validate.setFields = function () {
+        alert("hello");
+    }
+
     function applyValidation(fieldObject) {
-	switch(fieldObject.rule) {
-	case 'required':
-        var value = field.value,
-            type = field.type;
+        switch (fieldObject.rule) {
+            case 'required':
+                var value = field.value,
+                    type = field.type;
 
-        if (type === 'checkbox' || type == 'radio') {
-            return (field.checked === true);
+                if (type === 'checkbox' || type == 'radio') {
+                    return (field.checked === true);
+                }
+
+                return (value !== null && value != '');
+                break;
+
+            default:
+                return validationRules[fieldObject.rule].test(fieldObject.field.value);
+                break;
         }
-
-        return (value !== null && value != '');
-	    break;
-
-	default:
-        return validationRules[fieldObject.rule].test(fieldObject.field.value);
-	    break;
-	}
     }
 
     var validationMessages = {
