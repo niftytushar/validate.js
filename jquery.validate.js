@@ -13,7 +13,7 @@
         return this.each(function (index, value) {
             var $this = $(this),
                 fieldName = $this.prop("name"),
-                fieldObject = $.extend({}, $.fn.validate.fieldDefaults, options.fields[fieldName] || {});
+                fieldObject = $.extend({}, $.fn.validate.fieldDefaults, settings.fields[fieldName]);
 
             fieldObject["element"] = $this;
             fieldObject["rule"] = fieldObject["rule"].split("|");
